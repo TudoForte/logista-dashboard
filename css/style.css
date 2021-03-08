@@ -1,0 +1,442 @@
+/* Base */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    /* Variáveis */
+    --verde: #07c154;
+    --azul: #031033;
+}
+
+::selection {
+    background: var(--verde);
+    color: #fff;
+}
+
+:hover {
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+:focus {
+    outline: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    
+    background: #f2f2f2;
+
+    color: var(--azul);
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    text-align: left;
+
+    scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+embed,
+iframe,
+audio {
+    max-width: 100%;
+}
+
+.dashboard {
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+}
+
+.wrap {
+    max-width: 1200px;
+    padding: 40px;
+    margin: 20px auto;
+
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Login */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px;
+}
+
+.login-page .login-wrap {
+    width: 100%;
+    max-width: 540px;
+    padding: 40px;
+
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+
+    text-align: center;
+}
+
+.login-page .login-wrap h1 {
+    margin: 40px 0;
+
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.login-page .login-wrap label {
+    display: block;
+
+    font-size: 1.4rem;
+    color: #333;
+    text-align: left;
+}
+
+.login-page .login-wrap input {
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    margin: 5px 0 20px;
+
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: .075rem;
+    color: #999;
+}
+
+:-ms-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+::-webkit-input-placeholder {
+    color: #999;
+}
+
+.login-page .login-wrap a[type="submit"] {
+    display: block;
+
+    width: 100%;
+    height: 60px;
+
+    background: var(--verde);
+    border-radius: 3px;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 6rem;
+    letter-spacing: .075rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+
+    appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.login-page .link-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.login-page .link-wrap .checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.login-page .link-wrap .checkbox input {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    margin-right: 5px;
+
+    appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.login-page .link-wrap .checkbox label {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #333;
+}
+
+.login-page .link-wrap .link {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* Header */
+.main-header {
+    width: 100%;
+    height: auto;
+    margin: 40px auto 0;
+
+    text-align: center;
+}
+
+/* Módulo Performance */
+.module-performance .performance-title {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.module-performance .performance-title .title h2 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 3rem;
+}
+
+.module-performance .performance-title .filters {
+    text-align: right;
+}
+
+.module-performance .performance-title .filters input {
+    width: auto;
+    height: 45px;
+    padding: 0 20px;
+
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: .075rem;
+    color: #999;
+
+    appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.module-performance .performance-tables {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.module-performance .performance-tables .table {
+    margin-top: 40px;
+
+    text-align: center;
+}
+
+.module-performance .performance-tables .table h3 {
+    margin-bottom: 20px;
+
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 3rem;
+}
+
+.module-performance .performance-tables .table span {
+    display: block;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: var(--verde);
+}
+
+/* Gráfico */
+.module-graphic .graphic-title {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.module-graphic .graphic-title .title {
+    text-align: center;
+}
+
+.module-graphic .graphic-title .title h2 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 3rem;
+}
+
+.module-graphic .graphic-title .title span {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.module-graphic .graphic-title .title h2 span {
+    font-size: 2.4rem;
+    font-weight: 900;
+    line-height: 3rem;
+    color: var(--verde);
+}
+
+.module-graphic .graphic-title .tabs:last-child {
+    text-align: right;
+}
+
+.module-graphic .graphic-title .tabs select {
+    width: auto;
+    height: 45px;
+    padding: 0 30px 0 20px;
+
+    background: url(../images/seta.svg) no-repeat;
+    background-position: center right 10px;
+    background-size: 15px 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: .075rem;
+    color: #999;
+
+    appearance: none;
+    -o-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.module-graphic .graphic-infos {
+    margin-top: 40px;
+
+    text-align: center;
+}
+
+.module-affiliate {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.module-affiliate span {
+    display: block;
+
+    text-align: center;
+}
+
+.module-affiliate .title {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+.module-affiliate .description {
+    margin-top: 5px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #999;
+}
+
+@media screen and (max-width: 768px) {
+    .module-performance .performance-tables {
+        grid-template-columns: 1fr;
+    }
+
+    .module-affiliate {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .wrap,
+    .login-page .login-wrap {
+        padding: 20px;
+    }
+
+    .module-performance .performance-title,
+    .module-performance .performance-tables,
+    .module-graphic .graphic-title,
+    .module-affiliate {
+        grid-template-columns: 1fr;
+    }
+
+    .module-performance .performance-title,
+    .module-performance .performance-title .filters,
+    .module-graphic .graphic-title,
+    .module-graphic .graphic-title .tabs:last-child {
+        text-align: center;
+    }
+
+    .module-performance .performance-title .title h2 {
+        margin-bottom: 20px;
+    }
+
+    .module-performance .performance-tables .table {
+        margin-top: 20px;
+    }
+
+    .module-performance .performance-tables .table h3 {
+        margin-bottom: 10px;
+    }
+
+    .module-graphic .graphic-title .title {
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .wrap,
+    .login-page .login-wrap {
+        padding: 10px;
+    }
+
+    
+
+    
+}
